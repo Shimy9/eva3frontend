@@ -1,0 +1,240 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*? MINI-NAVBAR STYLES */
+
+.miniheader-navbar {
+  background: #c2ffc0;
+  min-height: 28px;
+  height: 28px;
+  font-size: 12px;
+  padding: 0;
+  box-shadow: none;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.miniheader-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniheader-text {
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+/* ?NAVBAR STYLES */
+
+
+/* navbar principal */
+.navbar-main {
+  border-bottom: 1px solid #eee;
+  height: 60px;
+  
+}
+
+/* CONTENEDOR DEL NAVBAR */
+.navbar-container {
+  overflow: hidden;
+}
+
+/* BRAND */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* TEXT BOLD*/
+.text-bold {
+  -webkit-text-stroke: 0.7px #222;
+}
+
+/* FUENTE DEL TEXTO*/
+@font-face {
+  font-family: "MiFuente";
+  src: url("./assets/fonts/LaNantes.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* TEXTO DEL BRAND */
+.brand-text {
+  font-size: 30px;
+  letter-spacing: 5px;
+  line-height: 1;
+  font-family: 'MiFuente', sans-serif;
+}
+
+/* FONT LOGO Hover*/
+.text-bold:hover,
+.text-bold:focus {
+  color: #aeefff !important;
+  border-radius: 4px;
+  transition: color 0.2s;
+  -webkit-text-stroke: 0.5px #aeefff !important; 
+}
+
+/* LOGO */
+.logo-img {
+  margin-right: 10px;
+  height: 50px;
+  width: auto;
+}
+
+/* NAV LINK */
+.nav-link {
+  color: #222 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+  margin-right: 16px;
+}
+
+/* NAV LINK Hover*/
+.nav-link:hover,
+.nav-link:focus {
+  color: #aeefff !important;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+/* NAV LINK LAST */
+.nav-link-custom:last-child {
+  margin-right: 10px;
+}
+
+/* TOGLE ICON */
+  .navbar-toggler {
+  width: auto;
+  margin-bottom: 8px;
+}
+
+ /* MEDIAQUERYS */
+
+@media (max-width: 780px) {
+  .brand-text {
+    font-size: 20px;
+  }
+}  
+
+@media (max-width: 780px) {
+  .logo-img {
+    height: 30px;
+    width: auto;
+  }
+} 
+
+  @media (max-width: 305px) {
+  .brand-text{
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+} 
+
+  @media (max-width: 305px) {
+  .logo-img{
+    display: none;
+  }
+} 
+
+
+/* OFFCANVAS NAV LINK */
+.offcanvas-nav-link {
+  padding: 12px 0;
+  color: #222 !important;
+  font-weight: 500;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+
+/*? BANNER STYLES */
+
+/* BANNER MAIN */
+.banner-main {
+  width: 100%;
+  min-height: 800px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./assets/img/banner/banner.jpg');
+ 
+   align-items: flex-end ;
+   
+}
+
+/* BANNER CONTAINER */
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; 
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  
+}
+
+/* TEXTO BIENVENIDO */
+.bienvenido {
+ position: relative;
+  left: -18%;  
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: 'MiFuente';
+  text-shadow: 4px 4px 8px rgba(117, 205, 240, 0.5);
+  letter-spacing: 5px;
+  line-height: 1;
+  -webkit-text-stroke: 2px #ffffff; 
+  
+  
+}
+
+/* LINK DEL BANNER */
+.banner-link {
+ position: relative;
+  left: -18%;  
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s, color 0.2s;
+  cursor: pointer;
+  text-shadow: 10px 4px 8px rgba(130, 253, 253, 0.5);
+  letter-spacing: 2px;
+  line-height: 1;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: 2px solid transparent;
+  display: inline-block;
+  transition: border 0.2s,
+}
+
+/* LINK DEL BANNER Hover*/
+.banner-link:hover,
+.banner-link:focus {
+  color: #aeefff ;
+  text-decoration: none;
+ 
+}
+
