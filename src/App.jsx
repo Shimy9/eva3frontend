@@ -5,7 +5,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import MiniHeader from "./components/MiniHeader";
 import Banner from "./components/Banner"; 
-
+import Productos from "./components/Productos";
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
           path="/"
           element={
             <>
-              
               <MiniHeader />
               <NavBar />
               <Banner />
+              <Productos />
             </>
           }
         />
