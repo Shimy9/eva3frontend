@@ -5,7 +5,6 @@
 
 /*?--MININAV STYLES--*/
 
-
 /* Mini navbar main */
 .miniheader-navbar {
   background: #c2ffc0;
@@ -38,10 +37,9 @@
 
 /*?--NAVBAR STYLES--*/
 
-
 /* Navbar principal */
 .navbar-main {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ffe2bd;
   height: 60px;
 }
 
@@ -124,7 +122,6 @@
 
 /*?--MEDIAQUERYS NAVBAR--*/
 
-
 /* Brand text smaller than 780px */
 @media (max-width: 780px) {
   .brand-text {
@@ -168,7 +165,6 @@
 }
 
 /*?--BANNER STYLES--*/
-
 
 /* Banner main */
 .banner-main {
@@ -241,6 +237,22 @@
 /*?--PRODUCTOS STYLES--*/
 
 
+/* Loading productos */
+.productos-loading {
+  padding: 3rem 0;    
+  text-align: center; 
+}
+/* Error productos */
+.productos-error{
+  padding: 3rem 0;    
+}
+ 
+/* Main container */
+.productos-main-container {
+ padding: 3rem 0;   
+}
+
+/*Ttitulo productos */
 .titulo-productos {
   margin-bottom: 26px;
   color: #222;
@@ -249,12 +261,40 @@
   line-height: 1;
   -webkit-text-stroke: 1.5px #222;
   font-size: 50px;
-  
+  text-shadow: 10px 4px 8px rgba(130, 253, 253, 0.7);
 }
 
+/* Productos container */
+.productos-columna {
+  margin-bottom: 1.5rem; 
+  height: 100%;          
+  display: flex;
+  flex-direction: column;
+}
+
+/* Productos card */
+.productos-card {
+  height: 100%;           
+  display: flex;          
+  flex-direction: column; 
+}
+
+/* Productos card img */
+.productos-card-img {
+  object-fit: cover;
+  height: 347px;
+}
+
+/* Productos card body */
+.productos-card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Productos card title */
 .card-title {
-  min-height: 20px; 
-  font-family: 'Times New Roman', Times, bold;
+  min-height: 20px;
+  font-family: "Times New Roman", Times, bold;
   font-weight: 800;
   font-size: 1.5rem;
   display: flex;
@@ -262,28 +302,48 @@
   justify-content: center;
 }
 
+/* Productos card description */
+.card-description {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Productos card divider */
 .card-divider {
   border-bottom: 1px solid #eee;
   margin: 0.4rem 0 1rem 0;
 }
 
+/* Productos card button */
 .btn-contactanos:hover,
 .btn-contactanos:focus {
-  
-  color: #FFF !important;
+  color: #fff !important;
   transition: background-color 0.2s, color 0.2s !important;
-
 }
 
-
-.card-description {
-  min-height: 90px; 
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;	
-  
+/* comntenedor colores */
+.div-colores {
+  margin-top: 0.5rem; 
 }
 
+/* Colores badge */
+.productos-color-badge {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.15em 0.8em;
+  margin-right: 0.4em;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 0.8em;
+  min-width: 48px;
+  text-align: center;
+  line-height: 1.5;
+  color:#fff;
+}
+
+/* Card precio */
 .card-precio {
   min-height: 32px;
   display: flex;

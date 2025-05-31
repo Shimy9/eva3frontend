@@ -1,14 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Spinner,
-  Alert,
-  Badge,
-  Button,
-} from "react-bootstrap";
+import {Container,Row,Col,Card,Spinner,Alert,Badge,Button,} from "react-bootstrap";
 
 const API_URL =
   "https://www.clinicatecnologica.cl/ipss/tejelanasVivi/api/v1/products-services/";
@@ -23,7 +14,7 @@ const colorMap = {
 };
 
 function getColorValue(nombre) {
-  const normalizado = nombre
+  const normalizado = nombre;
   return colorMap[normalizado];
 }
 // Solo productos
@@ -39,7 +30,7 @@ function Productos() {
         const response = await fetch(API_URL, { headers });
         if (!response.ok) throw new Error("Error al cargar los productos");
         const data = await response.json();
-        setProductos(data.data.productos); 
+        setProductos(data.data.productos);
       } catch (error) {
         setError(error);
       } finally {
@@ -51,7 +42,7 @@ function Productos() {
 
   if (loading)
     return (
-      <Container className="py-5 text-center">
+      <Container className="productos-loading">
         <Spinner animation="border" />
         <div>Cargando productos...</div>
       </Container>
@@ -59,30 +50,33 @@ function Productos() {
 
   if (error)
     return (
-      <Container className="py-5">
+      <Container className="productos-error">
         <Alert variant="danger">{error.message}</Alert>
       </Container>
     );
 
   return (
-    <Container className="py-5">
+    <Container className="productos-main-container">
       <h2 className="titulo-productos">-Productos-</h2>
       <Row>
         {productos.map((producto) => (
-          <Col md={4} sm={6} xs={12} className="mb-4 h-100" key={producto.id}>
-            <Card className="h-100 d-flex flex-column">
+          <Col
+            md={4}
+            sm={6}
+            xs={12}
+            className="productos-columna"
+            key={producto.id}
+          >
+            <Card className="productos-card">
               {producto.imgs && producto.imgs.length > 0 && (
                 <Card.Img
                   variant="top"
                   src={producto.imgs[0]}
                   alt={producto.nombre}
-                  style={{
-                    objectFit: "cover",
-                    height: "347px",
-                  }}
+                  className="productos-card-img"
                 />
               )}
-              <Card.Body className="d-flex flex-column">
+              <Card.Body className="productos-card-body">
                 <div className="card-title">{producto.nombre}</div>
                 <div className="card-divider" />
                 <div className="card-description">{producto.descripcion}</div>
@@ -98,24 +92,14 @@ function Productos() {
                   </div>
                 )}
                 {producto.colores && producto.colores.length > 0 && (
-                  <div className="mt-2">
+                  <div className="div-colores">
                     <strong>Colores:</strong>{" "}
                     {producto.colores.map((color, idx) => (
                       <span
                         key={idx}
+                        className="productos-color-badge"
                         style={{
-                          display: "inline-block",
                           backgroundColor: getColorValue(color),
-                          color: "#fff",
-                          borderRadius: "10px",
-                          padding: "0.15em 0.8em",
-                          marginRight: "0.4em",
-                          fontWeight: "bold",
-                          textTransform: "capitalize",
-                          fontSize: "0.8em",
-                          minWidth: "48px",
-                          textAlign: "center",
-                          lineHeight: "1.5",
                         }}
                       >
                         {color}
@@ -132,8 +116,7 @@ function Productos() {
                   href="https://wa.me/56912345678"
                   target="_blank"
                   rel="noopener noreferrer"
-                    variant="outline-info"
-                    
+                  variant="outline-info"
                 >
                   Contáctanos
                 </Button>
@@ -147,9 +130,3 @@ function Productos() {
 }
 
 export default Productos;
-
-
-
-
-
-
