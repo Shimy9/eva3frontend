@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
-import {Container,Row,Col,Card,Spinner,Alert,Badge,Button,} from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  Spinner,
+  Alert,
+  Badge,
+  Button,
+} from "react-bootstrap";
 
 const API_URL =
   "https://www.clinicatecnologica.cl/ipss/tejelanasVivi/api/v1/products-services/";
@@ -18,10 +28,11 @@ function getColorValue(nombre) {
   return colorMap[normalizado];
 }
 // Solo productos
-function Productos() {
+function Productos({ setProductoSeleccionado }) {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const traerProductos = async () => {
@@ -58,7 +69,7 @@ function Productos() {
   return (
     <Container className="productos-main-container">
       <h2 className="titulo-productos">-Productos-</h2>
-      <Row>
+      <Row className="justify-content-center">
         {productos.map((producto) => (
           <Col
             md={4}
@@ -112,11 +123,14 @@ function Productos() {
                   <strong>Precio: </strong> ${producto.precio}
                 </div>
                 <Button
-                  className="mt-3 btn-contactanos"
-                  href="https://wa.me/56912345678"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  className="btn-contactanos"
                   variant="outline-info"
+                  onClick={() => {
+                    setProductoSeleccionado(producto.nombre);
+                    const contacto = document.getElementById("contacto");
+                    if (contacto)
+                      contacto.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Contáctanos
                 </Button>

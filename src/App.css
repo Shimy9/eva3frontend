@@ -5,6 +5,10 @@
 
 /*?--MININAV STYLES--*/
 
+
+
+
+
 /* Mini navbar main */
 .miniheader-navbar {
   background: #c2ffc0;
@@ -36,6 +40,9 @@
 }
 
 /*?--NAVBAR STYLES--*/
+
+
+
 
 /* Navbar principal */
 .navbar-main {
@@ -122,6 +129,9 @@
 
 /*?--MEDIAQUERYS NAVBAR--*/
 
+
+
+
 /* Brand text smaller than 780px */
 @media (max-width: 780px) {
   .brand-text {
@@ -166,6 +176,11 @@
 
 /*?--BANNER STYLES--*/
 
+
+
+
+
+
 /* Banner main */
 .banner-main {
   width: 100%;
@@ -184,12 +199,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 10px;
   position: absolute;
 }
 
@@ -234,29 +247,119 @@
   text-decoration: none;
 }
 
+/*?--NOSOTROS STYLES--*/
+
+
+
+
+/* Fondo principal de la sección Nosotros */
+.div-nosotros-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen de fondo de Nosotros */
+.div-nosotros-bg-img {
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Contenido principal de Nosotros */
+.div-nosotros-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Columna de la imagen en Nosotros */
+.columna-img {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* Imagen de Nosotros */
+.img-nosotros {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 60px;
+}
+
+/* Descripción de Nosotros */
+.nosotros-descripcion {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #222;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-align: left;
+  margin-bottom: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin-left: 1.7rem;
+}
+
+/* Estilos para los textos resaltados en Nosotros */
+.nosotros-pastel {
+  color: #c2ffc0;
+  font-weight: bold;
+}
+.nosotros-pastel2 {
+  color: #ffe2bd;
+  font-weight: bold;
+}
+.nosotros-pastel3 {
+  color: #aeefff;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .img-nosotros {
+    margin: 1rem auto 0 auto;
+    max-width: 90%;
+  }
+  .nosotros-descripcion {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
 /*?--PRODUCTOS STYLES--*/
+
+
+
 
 
 /* Loading productos */
 .productos-loading {
-  padding: 3rem 0;    
-  text-align: center; 
+  padding: 3rem 0;
+  text-align: center;
 }
 /* Error productos */
-.productos-error{
-  padding: 3rem 0;    
+.productos-error {
+  padding: 3rem 0;
 }
- 
+
 /* Main container */
 .productos-main-container {
- padding: 3rem 0;   
+  padding: 3rem 0;
 }
 
 /*Ttitulo productos */
 .titulo-productos {
-  margin-bottom: 26px;
+  margin-bottom: 36px !important;
   color: #222;
-  font-family: "MiFuente";
+  font-family: "MiFuente" !important;
   letter-spacing: 10px;
   line-height: 1;
   -webkit-text-stroke: 1.5px #222;
@@ -266,17 +369,17 @@
 
 /* Productos container */
 .productos-columna {
-  margin-bottom: 1.5rem; 
-  height: 100%;          
+  margin-bottom: 1.5rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 /* Productos card */
 .productos-card {
-  height: 100%;           
-  display: flex;          
-  flex-direction: column; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Productos card img */
@@ -325,7 +428,7 @@
 
 /* comntenedor colores */
 .div-colores {
-  margin-top: 0.5rem; 
+  margin-top: 0.5rem;
 }
 
 /* Colores badge */
@@ -340,7 +443,7 @@
   min-width: 48px;
   text-align: center;
   line-height: 1.5;
-  color:#fff;
+  color: #fff;
 }
 
 /* Card precio */
@@ -351,3 +454,229 @@
   justify-content: center;
 }
 
+/*?--SERVICIOS STYLES--*/
+
+
+
+
+/* Loading servicios */
+.servicios-loading {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Error servicios */
+.servicios-error {
+  padding: 3rem 0;
+}
+
+/* Main container */
+.servicios-main-container {
+  padding: 3rem 0;
+}
+
+/* Título servicios */
+.titulo-productos {
+  margin-bottom: 46px !important;
+  color: #222;
+  font-family: "MiFuente" !important;
+  letter-spacing: 10px;
+  line-height: 1;
+  -webkit-text-stroke: 1.5px #222;
+  font-size: 50px;
+  text-shadow: 10px 4px 8px rgba(130, 253, 253, 0.7);
+}
+
+/* Servicios columna */
+.servicios-columna {
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Servicios Accordion */
+.servicios-accordion {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Imagen de servicio */
+.servicio-img {
+  object-fit: contain;
+  margin: 0;
+  width: 100%;
+
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .servicios-accordion {
+    max-width: 98vw;
+  }
+  .servicio-img {
+    max-width: 98vw;
+    margin: 0 auto;
+  }
+}
+
+/*?--FAQ STYLES--*/
+
+
+
+
+/* Loading FAQ */
+.faq-loading {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+/* Error FAQ */
+.faq-error {
+  padding: 3rem 0;
+}
+
+/* Main container FAQ */
+.faq-main-container {
+  padding: 3rem 0;
+}
+
+/* FAQ columna */
+.faq-columna {
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Responsive FAQ */
+@media (max-width: 767px) {
+  .faq-accordion {
+    max-width: 98vw;
+  }
+}
+
+/*?--CONTACTO STYLES--*/
+
+
+
+
+
+
+/* Main container Contacto */
+.contacto-main-container {
+  padding: 3rem 0;
+}
+
+/* Card de contacto */
+.contacto-card {
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 24px 0 rgba(130, 253, 253, 0.1);
+  border-radius: 1.5rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+/* Título de contacto */
+.titulo-productos {
+  margin-bottom: 26px;
+  color: #222;
+  font-family: "MiFuente" !important;
+  letter-spacing: 10px;
+  line-height: 1;
+  -webkit-text-stroke: 1.5px #222;
+  font-size: 50px;
+  text-shadow: 10px 4px 8px rgba(130, 253, 253, 0.7);
+}
+
+/* Botón de contacto */
+.btn-contacto {
+  border: none;
+  color: #fff !important;
+  width: 100%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-contacto:hover,
+.btn-contacto:focus {
+  background-color: #0d2c47;
+  color: #fff;
+}
+
+/* Mensajes de éxito y error */
+.contacto-alert {
+  margin-top: 1.5rem;
+}
+
+/* Responsive Contacto */
+@media (max-width: 767px) {
+  .contacto-card {
+    padding: 1rem 0.5rem;
+  }
+  .titulo-productos {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+}
+
+/*?--FOOTER STYLES--*/
+
+
+
+
+/* Footer principal */
+.footer-main {
+  background-color: #c2ffc0;
+  color: #222;
+  border-bottom: 8px solid #222;
+  padding: 0.3rem 0;
+}
+
+/* Footer logo */
+.footer-logo {
+  height: 60px;
+}
+
+/* Footer texto */
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Footer iconos */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #aeefff;
+}
+
+/* Responsive Footer */
+@media (max-width: 767px) {
+  .footer-logo {
+    height: 40px;
+  }
+}
