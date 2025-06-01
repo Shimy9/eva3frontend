@@ -39,11 +39,7 @@ function NavBar() {
     }
   };
 
-  const handleHome = () => {
-    setShow(false);
-    navigate("/");
-  };
-
+ 
   return (
     <>
       <Navbar

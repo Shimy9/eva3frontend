@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import {
   Container,
   Form,
@@ -11,10 +10,6 @@ import {
 } from "react-bootstrap";
 
 const ContactForm = ({ producto }) => {
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const productoParam = params.get("producto") || "";
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
