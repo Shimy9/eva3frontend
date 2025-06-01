@@ -14,4 +14,4 @@ emprendimiento realiza despachos a Santiago y regiones de Chile a través de Sta
 Chilexpress
 
 ## Pagina final
-- [VERSERL PAGE](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) 
+- [VERSERL PAGE](https://eva3frontend.vercel.app) 
